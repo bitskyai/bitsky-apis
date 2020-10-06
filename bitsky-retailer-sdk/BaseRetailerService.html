@@ -155,7 +155,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line76">line 76</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line77">line 77</a>
     </li></ul></dd>
     
 
@@ -259,7 +259,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line82">line 82</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line83">line 83</a>
     </li></ul></dd>
     
 
@@ -331,7 +331,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line88">line 88</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line89">line 89</a>
     </li></ul></dd>
     
 
@@ -474,7 +474,7 @@ After you call <a href="BaseRetailerService.html#init">init</a>, will base on <c
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line184">line 184</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line185">line 185</a>
     </li></ul></dd>
     
 
@@ -772,7 +772,7 @@ After you call <a href="BaseRetailerService.html#init">init</a>, will base on <c
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line476">line 476</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line511">line 511</a>
     </li></ul></dd>
     
 
@@ -1119,7 +1119,7 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line443">line 443</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line478">line 478</a>
     </li></ul></dd>
     
 
@@ -1225,7 +1225,7 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line152">line 152</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line153">line 153</a>
     </li></ul></dd>
     
 
@@ -1331,7 +1331,7 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line360">line 360</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line361">line 361</a>
     </li></ul></dd>
     
 
@@ -1368,6 +1368,209 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     <dd>
         
 <span class="param-type">string</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+
+
+        
+            
+
+    
+
+    
+    <h4 class="name" id="getRetailerConfiguration"><span class="type-signature">(async) </span>getRetailerConfiguration<span class="signature">(baseURL<span class="signature-attributes">opt</span>, globalId<span class="signature-attributes">opt</span>)</span><span class="type-signature"> &rarr; {Object|Error}</span></h4>
+    
+
+    
+
+
+
+<div class="description">
+    <p>Get retailer configuration by global id. If you didn't pass, then it uses <code>BITSKY_BASE_URL</code> and <code>GLOBAL_ID</code> return by <code>thi.getConfigs()</code></p>
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Attributes</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>baseURL</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>BitSky Supplier server url</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>globalId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>Retailer Configuration Glogbal ID</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line372">line 372</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+|
+
+<span class="param-type">Error</span>
 
 
     </dd>
@@ -1437,7 +1640,7 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line116">line 116</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line117">line 117</a>
     </li></ul></dd>
     
 
@@ -1586,7 +1789,7 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line598">line 598</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line633">line 633</a>
     </li></ul></dd>
     
 
@@ -1746,7 +1949,7 @@ You can find task schema from https://docs.bitsky.ai/api/bitsky-restful-api#requ
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line342">line 342</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line343">line 343</a>
     </li></ul></dd>
     
 
@@ -2233,7 +2436,7 @@ baseRetailerService.parse(parseFun)</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line545">line 545</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line580">line 580</a>
     </li></ul></dd>
     
 
@@ -2370,7 +2573,7 @@ baseRetailerService.parse(parseFun)</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line419">line 419</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line454">line 454</a>
     </li></ul></dd>
     
 
@@ -2525,7 +2728,7 @@ baseRetailerService.parse(parseFun)</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line197">line 197</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line198">line 198</a>
     </li></ul></dd>
     
 
@@ -2613,7 +2816,7 @@ baseRetailerService.parse(parseFun)</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line659">line 659</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line694">line 694</a>
     </li></ul></dd>
     
 
@@ -2773,7 +2976,7 @@ baseRetailerService.parse(parseFun)</code></pre>
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line235">line 235</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line236">line 236</a>
     </li></ul></dd>
     
 
@@ -2860,7 +3063,7 @@ baseRetailerService.trigger(triggerFun)</code></pre>
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Mon Sep 14 2020 07:45:55 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Tue Oct 06 2020 01:44:49 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
