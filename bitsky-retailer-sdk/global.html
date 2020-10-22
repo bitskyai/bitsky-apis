@@ -269,6 +269,62 @@
 
         <tr>
             
+                <td class="name"><code>RETAILER_HOME</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>Home folder of this retailer. Default is <code>${process.cwd()}/public</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>LOG_LEVEL</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                    info
+                
+                </td>
+            
+
+            <td class="description last"><p>Loging level you want to log. Please find available loging levels from <a href="https://github.com/winstonjs/winston#logging-levels">Winston Logging Levels</a></p></td>
+        </tr>
+
+    
+
+        <tr>
+            
                 <td class="name"><code>ERROR_LOG_FILE_NAME</code></td>
             
 
@@ -327,7 +383,7 @@
 
         <tr>
             
-                <td class="name"><code>LOG_FILES_PATH</code></td>
+                <td class="name"><code>DATA_FILE_NAME</code></td>
             
 
             <td class="type">
@@ -344,19 +400,19 @@
             
                 <td class="default">
                 
-                    public/log
+                    data.json
                 
                 </td>
             
 
-            <td class="description last"><p>Path to your log folder. You can view it by open <code>http://localhost:{PORT}/log/{COMBINED_LOG_FILE_NAME}</code> and <code>http://localhost:{PORT}/log/{ERROR_LOG_FILE_NAME}</code>. Default <code>node_modules/@bitskyai/retailer-sdk/lib/public/log</code></p></td>
+            <td class="description last"><p>Collect data file name. Default is <code>data.json</code>.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>LOG_LEVEL</code></td>
+                <td class="name"><code>CONNECTOR_TYPE</code></td>
             
 
             <td class="type">
@@ -373,19 +429,19 @@
             
                 <td class="default">
                 
-                    info
+                    json
                 
                 </td>
             
 
-            <td class="description last"><p>Loging level you want to log. Please find available loging levels from <a href="https://github.com/winstonjs/winston#logging-levels">Winston Logging Levels</a></p></td>
+            <td class="description last"><p>Connector is used to define the way how to store your data, default is <code>json</code>. Currently, we have two connector type - ['json', 'mongodb']</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>DATA_PATH</code></td>
+                <td class="name"><code>MONGODB_URL</code></td>
             
 
             <td class="type">
@@ -402,12 +458,147 @@
             
                 <td class="default">
                 
-                    public/data.json
+                    mongodb://localhost:27017/retailer
                 
                 </td>
             
 
-            <td class="description last"><p>Path to <code>data.json</code>, this is the default way to store data in your disk. Default <code>node_modules/@bitskyai/retailer-sdk/lib/public/data.json</code></p></td>
+            <td class="description last"><p>MongoDB url. **Important: ** if you configured <code>MONGODB_URL</code>, then <code>MONGODB_HOST</code> and <code>MONGODB_NAME</code> doesn't work.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MONGODB_HOST</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>MongoDB host url, like <code>ds123456.mlab.com</code>, <code>10.0.0.247</code>. Default is undefined.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MONGODB_PORT</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>MongoDB port number, like <code>63410</code>, <code>27017</code>. Default is undefined.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MONGODB_NAME</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>MongoDB name, like <code>retailer</code>. Default is undefined.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MONGODB_USERNAME</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>MongoDB user name, like <code>admin</code>. Default is undefined.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>MONGODB_PASSWORD</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>MongoDB password, like <code>123456</code>. Default is undefined.</p></td>
         </tr>
 
     
@@ -446,7 +637,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line719">line 719</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line754">line 754</a>
     </li></ul></dd>
     
 
@@ -804,7 +995,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line797">line 797</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line839">line 839</a>
     </li></ul></dd>
     
 
@@ -970,7 +1161,7 @@
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line808">line 808</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line850">line 850</a>
     </li></ul></dd>
     
 
@@ -1282,7 +1473,7 @@ If <code>data</code> is an <code>Object</code> not an Array, then data will be s
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line782">line 782</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line824">line 824</a>
     </li></ul></dd>
     
 
@@ -1692,7 +1883,7 @@ If <code>data</code> is an <code>Object</code> not an Array, then data will be s
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line733">line 733</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line775">line 775</a>
     </li></ul></dd>
     
 
@@ -1822,7 +2013,7 @@ If <code>data</code> is an <code>Object</code> not an Array, then data will be s
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="server.js.html">server.js</a>, <a href="server.js.html#line792">line 792</a>
+        <a href="server.js.html">server.js</a>, <a href="server.js.html#line834">line 834</a>
     </li></ul></dd>
     
 
@@ -1858,7 +2049,7 @@ If <code>data</code> is an <code>Object</code> not an Array, then data will be s
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Tue Oct 06 2020 01:44:49 GMT+0000 (Coordinated Universal Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.5</a> on Thu Oct 22 2020 22:00:46 GMT+0000 (Coordinated Universal Time)
 </footer>
 
 <script> prettyPrint(); </script>
